@@ -1,15 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.interface'
 
 
 
-//interfaccia Post
-interface Ipost{
-  id:number ,
-  body:string ,
-  title:string ,
-  active: boolean
-
-}
 
 @Injectable({
   providedIn: 'root'
@@ -18,16 +11,14 @@ interface Ipost{
 
 //classe post
 export class PostService  {
+posts: Post[] = []
 
-  id:number = 0
-  body:string = ''
-  title:string = ''
-  active: boolean = true
 
   constructor() { }
 
-   getPost (){
-    fetch("../assets/db.json")
+
+   getPosts (){
+   return fetch("../assets/db.json")
     .then((res)=>{
       if(res) {
           return res.json()
@@ -37,8 +28,7 @@ export class PostService  {
     })
     .then((data)=>{
       //dati disponibili
-      console.log(data);
-      return data
+      this.posts = data
 
 
 

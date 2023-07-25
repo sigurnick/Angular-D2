@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PostService } from 'src/app/post.service';
+import { Post } from 'src/app/interfaces/post.interface'
 
 @Component({
   selector: 'app-active-posts',
@@ -7,9 +8,20 @@ import { PostService } from 'src/app/post.service';
   styleUrls: ['./active-posts.component.scss'],
 })
 export class ActivePostsComponent {
-  constructor(public postService: PostService) {}
+  posts2: Post[] = []
+  postsActive: Post[] = []
+  constructor(public postService: PostService) {
 
-  getActivePost() {
-    const postActive: Post[] = this.postService.getPost();
+
+    this.postService.getPosts().then(_ =>{
+      this.posts2 = this.postService.posts
+      console.log(this.posts2);
+      this.postsActive = this.posts2.filter((e)=>e.active === true)
+      console.log(this.postsActive);
+
+
+    })
   }
+
+
 }
