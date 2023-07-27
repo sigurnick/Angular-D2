@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo1",
+      "active": true,
+      "type": "education",
+      "author": "Pippo"
+    },
+    {
+      "id": 2,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo2",
+      "active": false,
+      "type": "news",
+      "author": "Mario"
+    },
+    {
+      "id": 3,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo3",
+      "active": false,
+      "type": "news",
+      "author": "Mario"
+    },
+    {
+      "id": 4,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo4",
+      "active": false,
+      "type": "politic",
+      "author": "Paperino"
+    },
+    {
+      "id": 5,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo5",
+      "active": true,
+      "type": "news",
+      "author": "Gianni"
+    },
+    {
+      "id": 6,
+      "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et vel.",
+      "title": "Titolo6",
+      "active": true,
+      "type": "politic",
+      "author": "Luigi"
+    }
+  ]
+}

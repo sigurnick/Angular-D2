@@ -1,8 +1,27 @@
 
-<ul>
-  <li class="mb-6" *ngFor="let singlePost of postsActive">
+<div class="container mx-auto flex flex-col items-center mt-20">
 
-    <h3 class="text-xl font-bold">{{singlePost.title}}</h3>
-    <p>{{singlePost.body}}</p>
-  </li>
-</ul>
+  <div class="card mb-6 rounded-md w-[500px]  flex flex-col gap-2 shadow-lg"
+  *ngFor="let singlePost of activePostsData"
+  [ngClass]="{
+  'bg-indigo-600': singlePost.type === 'news',
+  'bg-yellow-400': singlePost.type === 'politic',
+  'bg-gray-600': singlePost.type === 'education'}"
+  >
+
+    <h2 class="text-xl font-bold p-5 text-white">Post</h2>
+    <hr>
+    <div class="flex justify-start">
+
+      <h3 class="text-xl font-bold py-5 pl-5 text-white">{{singlePost.title}} - </h3>
+      <h3 appAuthorcolor class="text-xl font-bold py-5 text-white"> 
+        {{singlePost.author | maiusc}}</h3>
+    </div>
+      <p class="p-5 text-white" >{{singlePost.body}}</p>
+      <button class="text-white rounded-md bg-slate-900 py-2 px-4 m-5"
+      (click)="changeStatus(singlePost.id)"
+      >Disattiva</button>
+
+      <!-- (click)="remove(singlePost.id)" -->
+  </div>
+</div>

@@ -8,6 +8,9 @@ import { ActivePostsComponent } from './pages/active-posts/active-posts.componen
 import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ButtonComponent } from './components/button/button.component';
+import { MaiuscPipe } from './maiusc.pipe';
+import { AuthorcolorDirective } from './authorcolor.directive';
 
 
 
@@ -19,6 +22,9 @@ import { NavComponent } from './components/nav/nav.component';
     InactivePostsComponent,
     HeaderComponent,
     NavComponent,
+    ButtonComponent,
+    MaiuscPipe,
+    AuthorcolorDirective,
 
   ],
   imports: [
